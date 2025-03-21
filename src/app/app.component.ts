@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello from BridgeLabz';
-  logoUrl: string = 'https://upload.wikimedia.org/wikipedia/commons/5/5b/BridgeLabz_Logo.png';
+  logoUrl: string = 'assets/Logo.png'; // Use relative path
 }
