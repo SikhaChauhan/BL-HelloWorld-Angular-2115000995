@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Hello from BridgeLabz';
   logoUrl: string = 'assets/Logo.png';
   bridgeLabzUrl: string = 'https://www.bridgelabz.com';
+  userName: string = '';
 
   openBridgeLabz(): void {
     window.open(this.bridgeLabzUrl, '_blank');

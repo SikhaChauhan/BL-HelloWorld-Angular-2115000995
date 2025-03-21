@@ -102,7 +102,14 @@
 
 <div class="content" role="main">
   <div class="card-container">
-    <h1>Hello from BridgeLabz</h1>
+    <h1>Hello {{ userName || 'Guest' }} from BridgeLabz!</h1>
     <img [src]="logoUrl" alt="BridgeLabz Logo" width="300" (click)="openBridgeLabz()" style="cursor: pointer;">
+<!-- Input field with two-way binding -->
+    <div>
+      <br/>
+      <label for="name">Enter your name: </label>
+      <input id="name" type="text" [(ngModel)]="userName" placeholder="Your name">
+    </div>
   </div>
+  <!-- <p>Welcome, {{ userName || 'Guest' }}!</p> -->
 <router-outlet></router-outlet>
