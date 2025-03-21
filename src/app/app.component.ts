@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello from BridgeLabz';
-  logoUrl: string = 'assets/Logo.png'; // Use relative path
+  logoUrl: string = 'assets/Logo.png';
+  bridgeLabzUrl: string = 'https://www.bridgelabz.com';
+
+  openBridgeLabz(): void {
+    window.open(this.bridgeLabzUrl, '_blank');
+  }
 }
