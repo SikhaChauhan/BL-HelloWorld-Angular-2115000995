@@ -103,13 +103,20 @@
 <div class="content" role="main">
   <div class="card-container">
     <h1>Hello {{ userName || 'Guest' }} from BridgeLabz!</h1>
+
+    <!-- BridgeLabz Logo with click event -->
     <img [src]="logoUrl" alt="BridgeLabz Logo" width="300" (click)="openBridgeLabz()" style="cursor: pointer;">
-<!-- Input field with two-way binding -->
+
+    <!-- Input field for userName with two-way binding and validation -->
     <div>
-      <br/>
+      <br />
       <label for="name">Enter your name: </label>
-      <input id="name" type="text" [(ngModel)]="userName" placeholder="Your name">
+      <input id="name" type="text" [(ngModel)]="userName" (input)="validateInput()" placeholder="Your name">
+
+      <!-- Error message for invalid input -->
+      <p *ngIf="errorMessage" style="color: red">{{ errorMessage }}</p>
     </div>
   </div>
-  <!-- <p>Welcome, {{ userName || 'Guest' }}!</p> -->
+</div>
+
 <router-outlet></router-outlet>
